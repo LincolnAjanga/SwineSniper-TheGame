@@ -37,6 +37,14 @@ bgMusic.onpause = function() {
   isPlaying = false;
 };
 
+
+$(document).mousemove(function(e) {
+    $('#gun').offset({
+        left: e.pageX,
+        top: e.pageY + 20
+    });
+});
+
 // document.getElementById('gameOver').style.visibility = 'hidden';
 // var seconds_left = 11;
 // var interval = setInterval(function() {

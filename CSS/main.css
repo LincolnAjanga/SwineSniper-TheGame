@@ -4,6 +4,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-position-y: 30px;
+    cursor: url('../assets/cursor.ani');
+    margin: 0;
+    overflow: hidden;
 }
 #togglemusic{
     margin-left: 95vw;
@@ -33,7 +36,9 @@ body {
 audio{
     width: 10px;
 }
-
+#gun{
+    position: absolute;
+}
 
 
 
