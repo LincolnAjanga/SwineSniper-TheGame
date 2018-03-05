@@ -33,3 +33,64 @@ body {
 audio{
     width: 10px;
 }
+
+
+
+
+  /* .container {
+    margin-left: 0;
+    width: 110vw;
+  }
+  
+  .path {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 80px;
+    margin-top: 50px;
+  }
+  .cloud {
+    position: absolute;
+    left: 0;
+    display: block;
+    top: 0;
+  }
+  .white{
+      opacity: 50%;
+  }
+  .one{
+    animation: ani 180s infinite;
+  }
+  .two{
+    animation: ani 90s infinite;
+    margin-left: 20vw;
+  }
+  .three{
+    animation: ani 360s infinite;
+    margin-left: 40vw;
+  }
+  .four{
+    animation: ani 270s infinite;
+    margin-left: 60vw;
+  }
+  .five{
+    animation: ani 480s infinite;
+    margin-left: 80vw;
+  }
+  .six{
+    animation: ani 570s infinite;
+    margin-left: 100vw;
+  }
+  
+  
+  @keyframes ani {
+    0% {
+      left: -10vw;
+    }
+    50% {
+      left: 100vw;
+    }
+    100% {
+      left: -20vw;
+    }
+  } */
