@@ -9,7 +9,10 @@
        <!-- <link href = "IMG/icon.png" rel="icon" type="image/gif"> -->
     </head>
     <body>
-        <audio controls="controls"><source src="assets/bgmusic.mp3" type="audio/mpeg" hidden = "true"/></audio>
+            <audio id="bgMusic" src="assets/bgmusic.mp3" preload="auto" loop = "true">
+            </audio>
+            <a onClick="togglePlay()"><img id = "togglemusic" src="IMG/togglemusic.png" alt="Toggle Music"></a>
+
         <div id = "timer_div"></div>
         <div id = "End">
             <center><h1><span id = "gameOver">Game Over</span></h1></center>

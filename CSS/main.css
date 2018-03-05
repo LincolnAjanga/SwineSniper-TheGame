@@ -5,16 +5,20 @@ body {
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-position-y: 30px;
 }
-/* .bgmusic{
-    display:none;
-} */
+#togglemusic{
+    margin-left: 95vw;
+    margin-top: 30px;
+    height: 50px;
+    width: 50px;
+    display: inline;
+}
 /* .game{
     background: black;
     width: 100vw;
     height: 100vh;
 } */
 #timer_div{
-    margin-top: 5vh;
+    margin-top: -7vh;
     margin-left: 2vw;
     font-size: 40px;
     font-family: 'Fontdiner Swanky';
