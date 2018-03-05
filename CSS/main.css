@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    background-image: url('../IMG/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position-y: 30px;
+}
+/* .game{
+    background: black;
+    width: 100vw;
+    height: 100vh;
+} */
