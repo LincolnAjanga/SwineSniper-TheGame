@@ -5,6 +5,9 @@ body {
     background-repeat: no-repeat, no-repeat, repeat-x;
     background-position-y: 30px;
 }
+/* .bgmusic{
+    display:none;
+} */
 /* .game{
     background: black;
     width: 100vw;
@@ -22,4 +25,7 @@ body {
 #gameOver{
     font-size: 60px;
     font-family: 'Fontdiner Swanky';
+}
+audio{
+    width: 10px;
 }
