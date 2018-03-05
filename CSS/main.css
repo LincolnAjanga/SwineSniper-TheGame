@@ -10,3 +10,16 @@ body {
     width: 100vw;
     height: 100vh;
 } */
+#timer_div{
+    margin-top: 5vh;
+    margin-left: 2vw;
+    font-size: 40px;
+    font-family: 'Fontdiner Swanky';
+}
+#End {
+    margin-top: 10vh;
+}
+#gameOver{
+    font-size: 60px;
+    font-family: 'Fontdiner Swanky';
+}
