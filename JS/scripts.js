@@ -31,10 +31,13 @@ var interval = setInterval(function() {
         document.getElementById('togglemusic').style.visibility = 'hidden';
         document.getElementById('overlay').style.visibility = 'visible';
         document.getElementById('gun_div').style.visibility = 'hidden';
-        bgMusic.pause()
-        audio.pause()
-        gameOver.play()
-        gunshot.pause()
+        bgMusic.pause();
+        audio.pause();
+        gameOver.play();
+        
+        $( document.body ).click(function() {
+          gunshot.pause()
+        });
     }
 }, 1000);
 
