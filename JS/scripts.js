@@ -1,7 +1,7 @@
 document.getElementById('gameOver').style.visibility = 'hidden';
         var audio = new Audio('assets/ticking.mp3');
         audio.loop = false;
-var seconds_left = 12;
+var seconds_left = 60;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
 
@@ -36,6 +36,15 @@ bgMusic.onplaying = function() {
 bgMusic.onpause = function() {
   isPlaying = false;
 };
+
+
+$(document).mousemove(function(e) {
+    $('#gun').offset({
+        left: e.pageX,
+        top: e.pageY + 20
+    });
+});
+
 
 // document.getElementById('gameOver').style.visibility = 'hidden';
 // var seconds_left = 11;
