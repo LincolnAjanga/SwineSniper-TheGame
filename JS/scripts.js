@@ -2,9 +2,15 @@ document.getElementById('gameOver').style.visibility = 'hidden';
 document.getElementById('overlay').style.visibility = 'hidden';
         var audio = new Audio('assets/ticking.mp3');
         audio.loop = false;
-var seconds_left = 10;
+        var gameOver = new Audio('assets/gameover.mp3');
+        gameOver.loop = false;
+var seconds_left = 5;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
+    
+    if (seconds_left >= 60) {
+      document.getElementById('timer_div').innerHTML = '1:00'
+    }
 
     if (seconds_left <= 10) {
         audio.play();
@@ -20,6 +26,7 @@ var interval = setInterval(function() {
         document.getElementById('gun_div').style.visibility = 'hidden';
         bgMusic.pause()
         audio.pause()
+        gameOver.play()
     }
 }, 1000);
 
