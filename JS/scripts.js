@@ -6,7 +6,7 @@ document.getElementById('overlay').style.visibility = 'hidden';
         gameOver.loop = false;
         var gunshot = new Audio('assets/gunshot.mp3');
         gunshot.loop = false;
-var seconds_left = 60;
+var seconds_left = 5;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
     
@@ -18,6 +18,11 @@ var interval = setInterval(function() {
         audio.play();
     }
 
+    if (seconds_left > 0){
+      $( document.body ).click(function() {
+        gunshot.play()
+      });
+    } //This isn't working
 
     if (seconds_left <= 0){
         document.getElementById('timer_div').innerHTML = 'Time Up!';
@@ -29,6 +34,7 @@ var interval = setInterval(function() {
         bgMusic.pause()
         audio.pause()
         gameOver.play()
+        gunshot.pause()
     }
 }, 1000);
 
@@ -57,9 +63,6 @@ $(document).mousemove(function(e) {
     });
 });
 
-$( document.body ).click(function() {
-  gunshot.play()
-});
 
 
 // document.getElementById('gameOver').style.visibility = 'hidden';
