@@ -4,6 +4,8 @@ document.getElementById('overlay').style.visibility = 'hidden';
         audio.loop = false;
         var gameOver = new Audio('assets/gameover.mp3');
         gameOver.loop = false;
+        var gunshot = new Audio('assets/gunshot.mp3');
+        gunshot.loop = false;
 var seconds_left = 5;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
@@ -16,6 +18,11 @@ var interval = setInterval(function() {
         audio.play();
     }
 
+    if (seconds_left > 0){
+      $( document.body ).click(function() {
+        gunshot.play()
+      });
+    } //This isn't working
 
     if (seconds_left <= 0){
         document.getElementById('timer_div').innerHTML = 'Time Up!';
@@ -24,9 +31,13 @@ var interval = setInterval(function() {
         document.getElementById('togglemusic').style.visibility = 'hidden';
         document.getElementById('overlay').style.visibility = 'visible';
         document.getElementById('gun_div').style.visibility = 'hidden';
-        bgMusic.pause()
-        audio.pause()
-        gameOver.play()
+        bgMusic.pause();
+        audio.pause();
+        gameOver.play();
+
+        $( document.body ).click(function() {
+          gunshot.pause()
+        });
     }
 }, 1000);
 
@@ -55,41 +66,3 @@ $(document).mousemove(function(e) {
     });
 });
 
-
-// document.getElementById('gameOver').style.visibility = 'hidden';
-// var seconds_left = 11;
-// var interval = setInterval(function() {
-//     document.getElementById('timer_div').innerHTML = --seconds_left;
-
-//     if (seconds_left <= 10) {
-//         var ticking = new Audio('assets/ticking.mp3');
-//         audio.loop = false;
-//         audio.play();
-//     }
-
-//     if (seconds_left <= 0){
-//         document.getElementById('timer_div').innerHTML = 'Time Up!';
-//         clearInterval(interval);
-//         document.getElementById('gameOver').style.visibility = 'visible';
-//         document.getElementById('togglemusic').style.visibility = 'hidden';
-//         bgMusic.pause()
-//         ticking.pause()
-//     }
-// }, 1000);
-
-// var bgMusic = document.getElementById("bgMusic");
-// var isPlaying = false;
-
-// function togglePlay() {
-//   if (isPlaying) {
-//     bgMusic.pause()
-//   } else {
-//     bgMusic.play();
-//   }
-// };
-// bgMusic.onplaying = function() {
-//   isPlaying = true;
-// };
-// bgMusic.onpause = function() {
-//   isPlaying = false;
-// };
