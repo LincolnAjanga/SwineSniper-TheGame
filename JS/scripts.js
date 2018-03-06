@@ -1,7 +1,8 @@
 document.getElementById('gameOver').style.visibility = 'hidden';
+document.getElementById('overlay').style.visibility = 'hidden';
         var audio = new Audio('assets/ticking.mp3');
         audio.loop = false;
-var seconds_left = 60;
+var seconds_left = 10;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
 
@@ -15,6 +16,8 @@ var interval = setInterval(function() {
         clearInterval(interval);
         document.getElementById('gameOver').style.visibility = 'visible';
         document.getElementById('togglemusic').style.visibility = 'hidden';
+        document.getElementById('overlay').style.visibility = 'visible';
+        document.getElementById('gun_div').style.visibility = 'hidden';
         bgMusic.pause()
         audio.pause()
     }
