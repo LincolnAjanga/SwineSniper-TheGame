@@ -4,7 +4,9 @@ document.getElementById('overlay').style.visibility = 'hidden';
         audio.loop = false;
         var gameOver = new Audio('assets/gameover.mp3');
         gameOver.loop = false;
-var seconds_left = 5;
+        var gunshot = new Audio('assets/gunshot.mp3');
+        gunshot.loop = false;
+var seconds_left = 60;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
     
@@ -53,6 +55,10 @@ $(document).mousemove(function(e) {
         left: e.pageX,
         top: e.pageY + 20
     });
+});
+
+$( document.body ).click(function() {
+  gunshot.play()
 });
 
 
