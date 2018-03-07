@@ -1,47 +1,56 @@
-document.getElementById('gameOver').style.visibility = 'hidden';
-document.getElementById('overlay').style.visibility = 'hidden';
+document.getElementById('gameOver').style.visibility = 'hidden'; //HIDE 'GAME OVER' TEXT
+document.getElementById('overlay').style.visibility = 'hidden'; //HIDE 'GAME OVER' OVERLAY
+
+//SETTING GLOBAL SOUND VARIABLES
         var audio = new Audio('assets/ticking.mp3');
         audio.loop = false;
         var gameOver = new Audio('assets/gameover.mp3');
         gameOver.loop = false;
         var gunshot = new Audio('assets/gunshot.mp3');
         gunshot.loop = false;
+
+//COUNTDOWN TIMER
 var seconds_left = 5;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
     
+//IF SHOW 1:00 ON 60 SECONDS
     if (seconds_left >= 60) {
       document.getElementById('timer_div').innerHTML = '1:00'
     }
 
+//TICKING SOUND BELOW 10 SECONDS
     if (seconds_left <= 10) {
         audio.play();
     }
 
+//GUNSHOT SOUND ON CLICK WHILE TIMER IS RUNNING
     if (seconds_left > 0){
       $( document.body ).click(function() {
         gunshot.play()
       });
-    } //This isn't working
+    }
 
+//WHEN THE TIMER RUNS OUT:
     if (seconds_left <= 0){
         document.getElementById('timer_div').innerHTML = 'Time Up!';
-        clearInterval(interval);
-        document.getElementById('gameOver').style.visibility = 'visible';
-        document.getElementById('togglemusic').style.visibility = 'hidden';
-        document.getElementById('overlay').style.visibility = 'visible';
-        document.getElementById('gun_div').style.visibility = 'hidden';
-        document.getElementsById('pig').style.visibility = 'hidden';
-        bgMusic.pause();
-        audio.pause();
-        gameOver.play();
+        clearInterval(interval); //CHANGE TIMER TEXT TO 'TIME UP!'
+        document.getElementById('gameOver').style.visibility = 'visible'; //SHOW 'GAME OVER' TEXT
+        document.getElementById('togglemusic').style.visibility = 'hidden'; //HIDE MUSIC TOGGLE
+        document.getElementById('overlay').style.visibility = 'visible'; //SHOW 'GAME OVER' OVERLAY
+        document.getElementById('gun_div').style.visibility = 'hidden'; //HIDE GUN
+        document.getElementsById('pig').style.visibility = 'hidden'; //HIDE PIG - ISN'T WORKING
+        bgMusic.pause(); //STOP MUSIC
+        audio.pause(); //STOPTICKING SOUND
+        gameOver.play(); //PLAY GAME OVER MUSIC
 
-        $( document.body ).click(function() {
+        $( document.body ).click(function() { //STOP GUNSHOTS
           gunshot.pause()
         });
     }
 }, 1000);
 
+//BACKGROUND MUSIC TOGGLE
 var bgMusic = document.getElementById("bgMusic");
 var isPlaying = false;
 
@@ -59,7 +68,7 @@ bgMusic.onpause = function() {
   isPlaying = false;
 };
 
-
+//MOVING PIGS
 $(document).mousemove(function(e) {
     $('#gun').offset({
         left: e.pageX,
@@ -74,7 +83,7 @@ $(document).ready(function(){
 
 function makeNewPosition(){
   
-  // Get viewport dimensions (remove the dimension of the div)
+    // Get viewport dimensions (remove the dimension of the div)
   var h = $(window).height() - 50;
   var w = $(window).width() - 50;
   

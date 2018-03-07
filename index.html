@@ -8,31 +8,43 @@
        <title>Pig Shooter</title>
        <!-- <link href = "IMG/icon.png" rel="icon" type="image/gif"> -->
     </head>
+
     <body>
+        <!-- 'GAME OVER' OVERLAY -->
         <div id="overlay"></div>
+
+        <!-- GAME DIV -->
         <div id = "game">
+
+            <!-- BACKGROUND MUSIC -->
             <audio id="bgMusic" src="assets/bgmusic.mp3" preload="auto" loop = "true">
             </audio>
             <a onClick="togglePlay()"><img id = "togglemusic" src="IMG/togglemusic.png" alt="Toggle Music"></a>
 
+        <!-- COUNTDOWN TIMER -->
         <div id = "timer_div"></div>
 
+        <!-- CLOUDS -->
         <!-- <div class="container">
                 <div class="path">
                    <span id="elem" class="trail"><img class = "cloud one" src="IMG/cloud1.png" alt="Cloud"><br><img class = "cloud two white" src="IMG/cloud2.png" alt="Cloud"><img class = "cloud three" src="IMG/cloud1.png" alt="Cloud"><br><img class = "cloud four white" src="IMG/cloud2.png" alt="Cloud"><img class = "cloud five" src="IMG/cloud1.png" alt="Cloud"><br><img class = "cloud six white" src="IMG/cloud2.png" alt="Cloud"></span> 
                  </div>
                </div> -->
-               
+
+        <!-- GAME OVER TEXT-->
         <div id = "End">
             <center><h1><span id = "gameOver">Game Over</span></h1></center>
         </div>
 
+            <!-- GUN -->
             <div id = "gun_div">
                 <img id = "gun" src="IMG/gun.png" alt="Gun">
             </div>
 
+            <!-- PIG(S) -->
             <div class='a'><img id = "pig" src="IMG/pig.png" alt="Shoot Me"></div>
         </div>
+        
         <!-- JAVA LINKS -->
         <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="JS/scripts.js"></script>
