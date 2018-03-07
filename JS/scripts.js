@@ -1,3 +1,10 @@
+var deathAnimation;
+var spriteSheet;
+var enemyXSpeed = 1.5;
+var enemyYSpeed = 1.75;
+var enemyXPos=100;
+var enemyYPos=100;
+
 document.getElementById('gameOver').style.visibility = 'hidden';
 document.getElementById('overlay').style.visibility = 'hidden';
         var audio = new Audio('assets/ticking.mp3');
@@ -6,7 +13,7 @@ document.getElementById('overlay').style.visibility = 'hidden';
         gameOver.loop = false;
         var gunshot = new Audio('assets/gunshot.mp3');
         gunshot.loop = false;
-var seconds_left = 5;
+var seconds_left = 60;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
     
@@ -109,4 +116,15 @@ function calcSpeed(prev, next) {
 
   return speed;
 
+}
+
+function pigDeath()
+{
+  deathAnimation = new Audio('assets/pigDeathSpriteSheet.png');
+  deathAnimation.regX = 99;ps://support.google.com/chrome/?p=help&ctx=keyboard#topic=7438008
+  deathAnimation.regY = 58;
+  deathAnimation.x = enemyXPos;
+  deathAnimation.y = enemyYPos;
+  deathAnimation.gotoAndPlay();
+  stage.addChild(deathAnimation);
 }
