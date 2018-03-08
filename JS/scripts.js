@@ -10,7 +10,7 @@ document.getElementById('overlay').style.visibility = 'hidden'; //HIDE 'GAME OVE
         gunshot.loop = false;
 
 //COUNTDOWN TIMER
-var seconds_left = 5;
+var seconds_left = 61;
 var interval = setInterval(function() {
     document.getElementById('timer_div').innerHTML = --seconds_left;
     
