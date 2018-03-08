@@ -1,0 +1,27 @@
+/*styling*/
+.moveIt{
+	padding:0px;
+	margin: 0px auto;
+	font-family: 'Caveat Brush', cursive;
+	text-align: center;
+	font-size: 85px;
+	font-weight: bold;
+	color: indigo;
+	background:url('assets/giphy.gif');
+
+}
+
+#mv{
+	padding-left: 30px;
+}
+
+#PigMaster{
+	padding-left:200px;
+	height: 100px;
+	width: auto;
+}
+
+
+body{
+	background-position: fixed;
+}
