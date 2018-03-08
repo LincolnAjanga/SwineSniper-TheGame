@@ -1,4 +1,4 @@
-#SwineSniper: The Game
+# SwineSniper: The Game
 
 ## Description
 Swine sniper is a web app game in which the player shoots as many evil, winged, pigs (which are flying around the screen) within the time limit. The pigs get faster as the time runs down, making the game harder.
